@@ -34,7 +34,6 @@ public class Lesson {
 
     public void setDateLesson(Date dateLesson) {
         getDayOnDate = new SimpleDateFormat("EEEEE yyyy-MM-dd").format(dateLesson);
-        System.out.println(getDayOnDate);
         this.dateLesson = dateLesson;
     }
 
@@ -87,5 +86,19 @@ public class Lesson {
         this.classRoom = classRoom;
     }
 
+
+    @Override
+    public String toString() {
+        return "Lesson{" +
+                "id=" + id +
+                ", dateLesson=" + dateLesson +
+                ", getDayOnDate='" + getDayOnDate + '\'' +
+                ", beginLesson='" + beginLesson + '\'' +
+                ", endLesson='" + endLesson + '\'' +
+                ", lessonName='" + lessonName + '\'' +
+                ", teacher='" + teacher + '\'' +
+                ", classRoom='" + classRoom + '\'' +
+                '}';
+    }
 }
 
