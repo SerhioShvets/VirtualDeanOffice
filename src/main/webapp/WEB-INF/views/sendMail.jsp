@@ -4,7 +4,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Getting Started: Handling Form Submission</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
 <h1>Form</h1>
@@ -15,20 +15,21 @@
     <button type="submit">ok</button>
 </form>--%>
 
- <form:form method ="POST" modelAttribute="sendMessage" action="/sendMail">
+<form:form method="POST" modelAttribute="sendMessage" action="/sendMail">
     <spring:bind path="sendMessage">
         <table>
             <tr>
+                <td><form:label type="text" path="sendMessage">Title</form:label></td>
+                <td><form:input path="title"/></td>
+
                 <td><form:label type="text" path="sendMessage">Message:</form:label></td>
-                <td><form:input path = "sendMessage"></form:input></td>
-            </tr>
-            <tr>
-                <td colspan = "2">
-                    <input type = "submit" value = "Submit"/>
+                <td><form:input path="sendMessage"/></td>
+                <td colspan="2">
+                    <input type="submit" value="Submit"/>
                 </td>
             </tr>
-    </table>
-     </spring:bind>
- </form:form>
+        </table>
+    </spring:bind>
+</form:form>
 </body>
 </html>

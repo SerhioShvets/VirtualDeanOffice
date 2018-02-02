@@ -12,21 +12,22 @@
 <body>
 <h2>Submitted Student Information</h2>
 
-<form:form modelAttribute="Message" method="GET">
+<%--<form:form modelAttribute="Message" method="GET">
     <spring:bind path="sendMessage">
         <h5>${Message.id}</h5>
-        <h5>${Message.author}</h5>
         <h5>${Message.sendMessage}</h5>
     </spring:bind>
 
-</form:form>
+</form:form>--%>
 
 <form:form modelAttribute="messageList" method="GET">
-        <c:forEach items="${messageList}" var="message">
-            <h3>${message.id}</h3>
-            <h3>${message.sendMessage}</h3>
-            <h3>${message.author}</h3>
-        </c:forEach>
+    <c:forEach items="${messageList}" var="message">
+        <table>
+            <td>${message.publicationDate}</td>
+            <td>${message.title}</td>
+            <td>${message.sendMessage}</td>
+        </table>
+    </c:forEach>
 
 </form:form>
 

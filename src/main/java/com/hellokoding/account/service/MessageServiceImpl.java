@@ -5,8 +5,8 @@ import com.hellokoding.account.repository.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Service
 public class MessageServiceImpl implements MessageService {
@@ -16,6 +16,9 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public void save(Message message) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("EEEEE yyyy/MM/dd HH:mm");
+        Date date = new Date();
+        message.setPublicationDate(dateFormat.format(date));
         messageRepository.save(message);
     }
 
@@ -28,10 +31,7 @@ public class MessageServiceImpl implements MessageService {
     public List<Message> findAllBy() {
         List<Message> messageList = new ArrayList<>();
         messageList.addAll(messageRepository.findAllBy());
-
-        for (Message message: messageList) {
-            System.out.println(message.toString());
-        }
+        Collections.reverse(messageList);
         return messageList;
     }
 

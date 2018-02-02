@@ -1,6 +1,7 @@
 package com.hellokoding.account.service;
 
 import com.hellokoding.account.model.Message;
+import com.hellokoding.account.model.User;
 
 import java.util.List;
 
