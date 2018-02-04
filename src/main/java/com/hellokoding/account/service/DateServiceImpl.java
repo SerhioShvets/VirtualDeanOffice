@@ -19,10 +19,10 @@ public class DateServiceImpl {
     }
 
 
-    public Date getRequestedDate(Date currentDate) {
+    public Date getRequestedDate(Date currentDate, int period) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(currentDate);
-        calendar.add(Calendar.DAY_OF_WEEK, 7);
+        calendar.add(Calendar.DAY_OF_WEEK, period);
         Date RequestedDate = new Date(calendar.getTime().getTime());
         return RequestedDate;
     }

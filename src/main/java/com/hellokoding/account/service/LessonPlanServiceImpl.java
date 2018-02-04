@@ -5,18 +5,19 @@ import com.hellokoding.account.repository.LessonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class LessonPlanServiceImpl implements LessonPlanService {
 
-    @Autowired
-    private LessonRepository lessonRepository;
+    @PersistenceContext
+    private EntityManager entityManager;
 
     @Autowired
-    private DateServiceImpl dateService;
+    private LessonRepository lessonRepository;
 
     @Override
     public List<Lesson> getAllBy() {
@@ -25,21 +26,14 @@ public class LessonPlanServiceImpl implements LessonPlanService {
     }
 
     @Override
-    public List<Lesson> getListLessonForPeriod(Date dateNow, Date inOneWeek) {
-        List<Lesson> listAllByDateLesson = new ArrayList<>();
-        Date dateToIncrement = dateNow;
-        while (inOneWeek.compareTo(dateToIncrement) != 0) {
-            if ((lessonRepository.getLessonByDateLesson(dateToIncrement) != null)) {
-                listAllByDateLesson.add(lessonRepository.getLessonByDateLesson(dateToIncrement));
-            }
-            dateToIncrement = dateService.getNextDay(dateToIncrement);
-        }
-        return listAllByDateLesson;
+    public List getListLessonForPeriod(Date dateNow, Date desiredDay) {
+        String query = "FROM Lesson WHERE dateLesson BETWEEN " + "'" + dateNow + "' " + "AND " + "'" + desiredDay + "'";
+        return entityManager.createQuery(query)
+                .getResultList();
     }
 
     @Override
     public Lesson getLessonByDateLesson(Date dateNow) {
         return lessonRepository.getLessonByDateLesson(dateNow);
     }
-
 }

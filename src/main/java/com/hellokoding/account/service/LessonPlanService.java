@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface LessonPlanService {
     List<Lesson> getAllBy();
-    List<Lesson> getListLessonForPeriod(Date dateNow, Date inOneWeek);
+    List getListLessonForPeriod(Date dateNow, Date inOneWeek);
     Lesson getLessonByDateLesson(Date dateNow);
 
 

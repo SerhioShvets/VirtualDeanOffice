@@ -2,6 +2,7 @@ package com.hellokoding.account.model;
 
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.util.Set;
 
 @Entity
@@ -9,8 +10,13 @@ import java.util.Set;
 public class User {
     private Long id;
     private String username;
+    private String name;
+    private String surname;
+    private String gender;
+    private String birthday;
     private String email;
     private String telephone;
+    private String address;
     private String password;
     private String passwordConfirm;
     private Set<Role> roles;
@@ -76,5 +82,46 @@ public class User {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+
     }
 }

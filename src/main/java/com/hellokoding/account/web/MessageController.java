@@ -27,7 +27,7 @@ public class MessageController {
     @RequestMapping(value = "/sendMail", method = RequestMethod.POST)
     public String message(@ModelAttribute("sendMessage") Message message) {
         messageService.save(message);
-        return "sendMail";
+        return "successSend";
     }
 
     @RequestMapping(value = "/unreadMail", method = RequestMethod.POST)

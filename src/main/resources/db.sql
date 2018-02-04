@@ -1,3 +1,4 @@
+DROP DATABASE `accounts`;
 CREATE DATABASE IF NOT EXISTS `accounts`;
 USE `accounts`;
 --
@@ -31,15 +32,30 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id`        INT(11) NOT NULL AUTO_INCREMENT,
   `username`  VARCHAR(255)     DEFAULT NULL,
+  `name`      VARCHAR(255)     DEFAULT NULL,
+  `surname`   VARCHAR(255)     DEFAULT NULL,
+  `gender`    VARCHAR(255)     DEFAULT NULL,
+  `birthday`  VARCHAR(255)     DEFAULT NULL,
   `email`     VARCHAR(255)     DEFAULT NULL,
   `telephone` VARCHAR(255)     DEFAULT NULL,
+  `address`   VARCHAR(255)     DEFAULT NULL,
   `password`  VARCHAR(255)     DEFAULT NULL,
-
   PRIMARY KEY (`id`)
 )
   ENGINE = InnoDB
   AUTO_INCREMENT = 4
   DEFAULT CHARSET = utf8;
+
+INSERT INTO `user` VALUE (1,
+                          'admin',
+                          'Serhio',
+                          'Shvets',
+                          'male',
+                          '1990-01-01',
+                          'admin@gmail.com',
+                          '555-555',
+                          'UK, REARQUHAR, 15 Bootham Terrace',
+                          '$2a$04$M/N0Ls42asrwjxcMwjZFbOTKmZyhrdW.lZ8XjjgXf.EYad3ibO3qK');
 
 --
 -- Table structure for table `user_role`
@@ -61,6 +77,8 @@ CREATE TABLE `user_role` (
   ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 
+INSERT INTO `user_role` VALUE (1, 1);
+INSERT INTO `user_role` VALUE (1, 2);
 
 DROP TABLE IF EXISTS `user_mail`;
 CREATE TABLE `user_mail` (

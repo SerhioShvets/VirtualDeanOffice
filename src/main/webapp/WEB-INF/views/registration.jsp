@@ -42,16 +42,49 @@
         <h2 class="form-signin-heading">Create your account</h2>
         <spring:bind path="username">
             <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input type="text" path="username" class="form-control" placeholder="Username" autofocus="true"/>
+                <form:input type="text" path="username" class="form-control" placeholder="username" autofocus="true"/>
                 <form:errors path="username"/>
             </div>
         </spring:bind>
 
+        <spring:bind path="name">
+            <div class="form-group ${status.error ? 'has-error' : ''}">
+                <form:input type="text" path="name" class="form-control" placeholder="name"
+                            autofocus="true"/>
+                <form:errors path="name"/>
+            </div>
+        </spring:bind>
+
+        <spring:bind path="surname">
+            <div class="form-group ${status.error ? 'has-error' : ''}">
+                <form:input type="text" path="surname" class="form-control" placeholder="surname"
+                            autofocus="true"/>
+                <form:errors path="surname"/>
+            </div>
+        </spring:bind>
+
+
+        <spring:bind path="gender">
+            <div class="form-group ${status.error ? 'has-error' : ''}">
+                <form:input type="text" path="gender" class="form-control" placeholder="gender"
+                            autofocus="true"/>
+                <form:errors path="gender"/>
+            </div>
+        </spring:bind>
+
+
+        <spring:bind path="birthday">
+            <div class="form-group ${status.error ? 'has-error' : ''}">
+                <form:input type="text" path="birthday" class="form-control" placeholder="birthday yyyy-mm-dd"
+                            autofocus="true"/>
+                <form:errors path="birthday"/>
+            </div>
+        </spring:bind>
 
 
         <spring:bind path="email">
             <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input type="text" path="email" class="form-control" placeholder="Email"
+                <form:input type="text" path="email" class="form-control" placeholder="email"
                             autofocus="true"/>
                 <form:errors path="email"/>
             </div>
@@ -59,7 +92,16 @@
 
         <spring:bind path="telephone">
             <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input type="text" path="telephone" class="form-control" placeholder="Telephone"
+                <form:input type="text" path="telephone" class="form-control" placeholder="telephone"
+                            autofocus="true"/>
+                <form:errors path="telephone"/>
+            </div>
+        </spring:bind>
+
+
+        <spring:bind path="address">
+            <div class="form-group ${status.error ? 'has-error' : ''}">
+                <form:input type="text" path="address" class="form-control" placeholder="address"
                             autofocus="true"/>
                 <form:errors path="telephone"/>
             </div>
