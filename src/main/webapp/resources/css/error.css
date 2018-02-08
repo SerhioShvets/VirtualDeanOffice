@@ -1,0 +1,13 @@
+.jumbotron {
+    background-color: white;
+}
+
+.jumbotron-my {
+    padding-top: 7%;
+}
+
+.btn.btn-primary.myBut {
+    background-color: #102250;
+    color: white;
+}
+

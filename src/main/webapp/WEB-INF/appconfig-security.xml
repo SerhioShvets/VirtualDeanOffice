@@ -14,7 +14,7 @@
         <intercept-url pattern="/unreadMail" access="hasAnyRole('ROLE_USER','ROLE_ADMIN')"/>
         <intercept-url pattern="/sendMail" access="hasRole('ROLE_ADMIN')"/>
         <form-login login-page="/login" default-target-url="/welcome" authentication-failure-url="/login?error" username-parameter="username" password-parameter="password"/>
-        <logout logout-success-url="/login?logout" />
+        <logout logout-success-url="/login?logout"/>
     </http>
 
     <authentication-manager alias="authenticationManager">

@@ -12,7 +12,6 @@ public class User {
     private String username;
     private String name;
     private String surname;
-    private String gender;
     private String birthday;
     private String email;
     private String telephone;
@@ -90,14 +89,6 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
     }
 
     public String getBirthday() {
