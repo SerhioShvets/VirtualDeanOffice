@@ -84,6 +84,7 @@ CREATE TABLE `user_mail` (
   publicationDate VARCHAR(255),
   title           VARCHAR(255),
   sendMessage     VARCHAR(4000),
+  subMessage      VARCHAR(255),
   PRIMARY KEY (id)
 )
   ENGINE = InnoDB

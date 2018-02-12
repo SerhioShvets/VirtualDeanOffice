@@ -1,5 +1,9 @@
+body{
+    background-color: #f5f5f5;
+}
+
 .jumbotron {
-    background-color: white;
+    background-color: #f5f5f5;
 }
 
 .jumbotron-my {
@@ -8,6 +12,6 @@
 
 .btn.btn-primary.myBut {
     background-color: #102250;
-    color: white;
+    color: #f5f5f5;
 }
 

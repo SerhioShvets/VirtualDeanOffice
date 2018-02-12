@@ -16,9 +16,15 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public void save(Message message) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("EEEEE yyyy/MM/dd HH:mm");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("EEEEE yyyy-MM-dd HH:mm");
         Date date = new Date();
         message.setPublicationDate(dateFormat.format(date));
+
+        if ((message.getSendMessage()).length() > 60){
+        message.setSubMessage(message.getSendMessage().substring(0, 60) + "...");
+        }else {
+            message.setSubMessage(message.getSendMessage());
+        }
         messageRepository.save(message);
     }
 

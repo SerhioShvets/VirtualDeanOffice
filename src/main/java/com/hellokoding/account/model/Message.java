@@ -9,6 +9,7 @@ public class Message {
     private String sendMessage;
     private String title;
     private String publicationDate;
+    private String subMessage;
 
 
     public String getSendMessage() {
@@ -53,5 +54,13 @@ public class Message {
                 ", title='" + title + '\'' +
                 ", publicationDate='" + publicationDate + '\'' +
                 '}';
+    }
+
+    public String getSubMessage() {
+        return subMessage;
+    }
+
+    public void setSubMessage(String subMessage) {
+        this.subMessage = subMessage;
     }
 }
