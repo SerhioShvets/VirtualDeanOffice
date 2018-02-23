@@ -1,7 +1,7 @@
 package com.hellokoding.account.service;
 
-import com.hellokoding.account.model.Lesson;
-import com.hellokoding.account.repository.LessonRepository;
+import com.hellokoding.account.model.LessonPlan;
+import com.hellokoding.account.repository.LessonPlanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,23 +17,23 @@ public class LessonPlanServiceImpl implements LessonPlanService {
     private EntityManager entityManager;
 
     @Autowired
-    private LessonRepository lessonRepository;
+    private LessonPlanRepository lessonPlanRepository;
 
     @Override
-    public List<Lesson> getAllBy() {
-        List<Lesson> lessonList = lessonRepository.getAllBy();
-        return lessonList;
+    public List<LessonPlan> getAllBy() {
+        List<LessonPlan> lessonPlanList = lessonPlanRepository.getAllBy();
+        return lessonPlanList;
     }
 
     @Override
     public List getListLessonForPeriod(Date dateNow, Date desiredDay) {
-        String query = "FROM Lesson WHERE dateLesson BETWEEN " + "'" + dateNow + "' " + "AND " + "'" + desiredDay + "'";
+        String query = "FROM LessonPlan WHERE dateLesson BETWEEN " + "'" + dateNow + "' " + "AND " + "'" + desiredDay + "'";
         return entityManager.createQuery(query)
                 .getResultList();
     }
 
     @Override
-    public Lesson getLessonByDateLesson(Date dateNow) {
-        return lessonRepository.getLessonByDateLesson(dateNow);
+    public LessonPlan getLessonByDateLesson(Date dateNow) {
+        return lessonPlanRepository.getLessonByDateLesson(dateNow);
     }
 }

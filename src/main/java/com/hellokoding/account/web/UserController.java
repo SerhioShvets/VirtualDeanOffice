@@ -29,18 +29,13 @@ public class UserController {
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
-    public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
+    public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
         userValidator.validate(userForm, bindingResult);
 
         if (bindingResult.hasErrors()) {
             return "registration";
         }
-
         userService.save(userForm);
-
-        /*щоб після реєстрації нового студента не перелоговувалося одразу на нього а залишатися на сторінці адміністрування*/
-        //securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
-
         return "redirect:/welcome";
     }
 
@@ -55,7 +50,7 @@ public class UserController {
     }
 
     @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
-    public String welcome(Model model) {
+    public String welcome() {
         return "welcome";
     }
 
@@ -63,5 +58,11 @@ public class UserController {
     public String getUserInformation(@PathVariable("userName") String userName, Model model) {
         model.addAttribute("user", userService.findByUsername(userName));
         return "userInfo";
+    }
+
+    @RequestMapping(value = "allStudents", method = RequestMethod.GET)
+    public String getAllStudents(Model model) {
+        model.addAttribute("allStudentsList", userService.getAllBy());
+        return "allStudents";
     }
 }

@@ -4,6 +4,10 @@
 <c:set var="adminFunction" scope="session" value="admin"/>
 
 <%@include file="header.jsp" %>
-
-
-<%@include file="footer.jsp"%>
+<div class="container">
+    <div class="jumbotron my-setting">
+        <h1>Welcome to the virtual Dean's office</h1>
+        <p>Dean's office is a place where you can find about your lessons and grades, as well as other information related to your studies.</p>
+    </div>
+</div>
+<%@include file="footer.jsp" %>

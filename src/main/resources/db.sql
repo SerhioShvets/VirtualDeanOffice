@@ -105,3 +105,33 @@ CREATE TABLE `LessonPlan` (
 )
   ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
+
+DROP TABLE IF EXISTS `Lesson`;
+
+CREATE TABLE `Lesson` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `lessonName` VARCHAR(255),
+  `teacherName` VARCHAR(255),
+  `estimateForm` VARCHAR(255),
+  `ectsPoint` INT,
+  PRIMARY KEY (`id`)
+)
+  ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
+
+
+INSERT INTO `Lesson` VALUE (1,'Algebra liniowa z geometrią','dr Andrzej Braun', 'Exam', 5);
+
+
+DROP TABLE IF EXISTS `Estimate`;
+
+CREATE TABLE `Estimate` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `idStudent` INT NOT NULL,
+  `idLesson` INT NOT NULL,
+  `estimate` VARCHAR(255),
+  PRIMARY KEY (`id`)
+)
+  ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
+

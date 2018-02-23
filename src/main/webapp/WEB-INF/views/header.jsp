@@ -48,9 +48,11 @@
                     <li><a href="http://localhost:8080/unreadMail">Message</a></li>
                     <li><a href="http://localhost:8080/lessonPlan/7">Plan</a></li>
                     <li><a href="http://localhost:8080/userInfo/${userName}">Info</a></li>
+                    <li><a href="http://localhost:8080/grade">Grade</a></li>
                     <c:if test="${userName == adminFunction}">
                         <li><a href="http://localhost:8080/registration">Create an account</a></li>
                         <li><a href="http://localhost:8080/sendMail/">Send mail</a></li>
+                        <li><a href="http://localhost:8080/allStudents">All Students</a></li>
                     </c:if>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

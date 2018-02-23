@@ -13,8 +13,7 @@
         <tbody>
         <form:form modelAttribute="messageList" method="GET" action="/unreadMail">
             <c:forEach items="${messageList}" var="message">
-                <tr class="toChange"
-                    onclick="window.location.href='http://localhost:8080/unreadMail/${message.id}'; return false">
+                <tr class="toChange" onclick="window.location.href='http://localhost:8080/unreadMail/${message.id}'; return false">
                     <th>${message.publicationDate}</th>
                     <th>${message.title}</th>
                     <th>${message.subMessage}</th>

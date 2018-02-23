@@ -1,14 +1,14 @@
 package com.hellokoding.account.service;
 
-import com.hellokoding.account.model.Lesson;
+import com.hellokoding.account.model.LessonPlan;
 
 import java.sql.Date;
 import java.util.List;
 
 public interface LessonPlanService {
-    List<Lesson> getAllBy();
+    List<LessonPlan> getAllBy();
     List getListLessonForPeriod(Date dateNow, Date inOneWeek);
-    Lesson getLessonByDateLesson(Date dateNow);
+    LessonPlan getLessonByDateLesson(Date dateNow);
 
 
 }

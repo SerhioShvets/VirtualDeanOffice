@@ -1,8 +1,6 @@
 package com.hellokoding.account.model;
 
-
 import javax.persistence.*;
-import java.sql.Date;
 import java.util.Set;
 
 @Entity
@@ -113,6 +111,18 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
+    }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", email='" + email + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 }

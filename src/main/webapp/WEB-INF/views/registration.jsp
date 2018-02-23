@@ -106,7 +106,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
                                 <form:input name="phone" type="text" path="telephone" class="form-control"
-                                            placeholder="605-555-555"/>
+                                            placeholder="+48 455 474 522"/>
                             </div>
                             <form:errors path="telephone"/>
                         </div>
@@ -151,7 +151,6 @@
             </div>
 
             <!--text-input passwordConfirm-->
-
             <div class="form-group">
                 <spring:bind path="passwordConfirm">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
