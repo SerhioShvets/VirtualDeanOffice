@@ -36,7 +36,12 @@ public class UserController {
             return "registration";
         }
         userService.save(userForm);
-        return "redirect:/welcome";
+        return "redirect:/registrationSuccess";
+    }
+
+    @RequestMapping(value = "/registrationSuccess", method = RequestMethod.GET)
+    public String registrationSuccess(){
+        return "registrationSuccess";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
