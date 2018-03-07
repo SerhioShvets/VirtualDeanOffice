@@ -22,7 +22,7 @@
     <!-- Configure the entity manager factory bean -->
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="packagesToScan" value="com.hellokoding.account"/>
+        <property name="packagesToScan" value="com.deans.office"/>
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
         </property>
@@ -47,7 +47,7 @@
           class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
 
     <!--Configure Spring Data JPA and set the base package of the repository interfaces-->
-    <jpa:repositories base-package="com.hellokoding.account.repository"/>
+    <jpa:repositories base-package="com.deans.office.repository"/>
 
 
 </beans>

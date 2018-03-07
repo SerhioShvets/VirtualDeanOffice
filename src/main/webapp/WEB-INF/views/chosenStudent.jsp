@@ -1,4 +1,4 @@
-<%@include file="header.jsp" %>
+    <%@include file="header.jsp" %>
 <div class="container">
     <form:form action="/chosenStudent" method="GET">
         <table class="table table-hover">

@@ -42,7 +42,7 @@
                     <span class="error-message">${error}</span>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     <div class="col-lg-12  col-md-12 col-sm-12">
-                        <button class="btn  submitButton">Submit</button>
+                        <button class="btn  submitButton">Log in</button>
                     </div>
                 </div>
             </div>
