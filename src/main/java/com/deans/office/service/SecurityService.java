@@ -3,5 +3,5 @@ package com.deans.office.service;
 public interface SecurityService {
     String findLoggedInUsername();
 
-    void autologin(String username, String password);
+    void autoLogin(String username, String password);
 }

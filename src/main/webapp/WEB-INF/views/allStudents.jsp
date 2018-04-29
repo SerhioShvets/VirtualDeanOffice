@@ -27,8 +27,6 @@
             </c:forEach>
         </table>
         <br>
-
-
     </form:form>
 </div>
 <%@include file="footer.jsp" %>

@@ -21,8 +21,7 @@ public class LessonPlanServiceImpl implements LessonPlanService {
 
     @Override
     public List<LessonPlan> getAllBy() {
-        List<LessonPlan> lessonPlanList = lessonPlanRepository.getAllBy();
-        return lessonPlanList;
+        return lessonPlanRepository.getAllBy();
     }
 
     @Override

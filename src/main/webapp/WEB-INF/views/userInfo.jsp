@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-xs-6 col-md-3">
             <a href="#" class="thumbnail">
-                <img src="${contextPath}/resources/img/${userName}.jpg" alt="avatar"></a>
+                <img src="${contextPath}/resources/img/${userName}.png" alt="avatar"></a>
         </div>
         <div class="col-xs-6 col-md-1"></div>
         <div class="col-xs-6 col-md-6 my">

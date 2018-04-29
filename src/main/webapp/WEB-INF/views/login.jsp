@@ -29,15 +29,15 @@
 
                 <div class="row loginbox">
                     <div class="col-lg-12">
-                        <span class="singtext">Sign in </span>
+                        <span class="singtext">Log in</span>
                     </div>
                     <span class="message-info">${message}</span>
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <input name="username" class="form-control" type="text"
-                               placeholder="Please enter your user name">
+                               placeholder="User Name">
                     </div>
                     <div class="col-lg-12  col-md-12 col-sm-12">
-                        <input name="password" class="form-control" type="password" placeholder="Please enter password">
+                        <input name="password" class="form-control" type="password" placeholder="Password">
                     </div>
                     <span class="error-message">${error}</span>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>

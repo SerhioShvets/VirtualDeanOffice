@@ -134,3 +134,5 @@ CREATE TABLE `Estimate` (
 )
   ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
+
+SELECT * FROM user;

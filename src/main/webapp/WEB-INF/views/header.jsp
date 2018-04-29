@@ -46,13 +46,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="http://localhost:8080/unreadMail">Message</a></li>
+                    <li><a href="http://localhost:8080/unreadMail">Messages</a></li>
                     <li><a href="http://localhost:8080/lessonPlan/7">Plan</a></li>
                     <li><a href="http://localhost:8080/userInfo/${userName}">Info</a></li>
                     <li><a href="http://localhost:8080/grade">Grade</a></li>
                     <c:if test="${userName == adminFunction}">
                         <li><a href="http://localhost:8080/registration">Create an account</a></li>
-                        <li><a href="http://localhost:8080/sendMail/">Send mail</a></li>
+                        <li><a href="http://localhost:8080/sendMail">Send mail</a></li>
                         <li><a href="http://localhost:8080/allStudents">All Students</a></li>
                     </c:if>
                 </ul>

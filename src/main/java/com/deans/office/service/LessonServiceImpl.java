@@ -16,8 +16,6 @@ public class LessonServiceImpl implements LessonService {
 
     @Override
     public List<Lesson> getAllBy() {
-        ArrayList<Lesson> lessonsList = new ArrayList<>();
-        lessonsList.addAll(lessonRepository.getAllBy());
-        return lessonsList;
+        return new ArrayList<>(lessonRepository.getAllBy());
     }
 }
