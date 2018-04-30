@@ -30,7 +30,7 @@ This application has two type accessing to the information. First - ROLE_USER (s
 ![grade](https://user-images.githubusercontent.com/26436190/39407227-cac1f670-4bc2-11e8-9161-101566fed73f.png)
 ### Timetable 
 ![timetable](https://user-images.githubusercontent.com/26436190/39407231-cb96deee-4bc2-11e8-8717-c371bbc6715b.png)
-### Creating new student profile with 
+### Creating new student profile
 ![createnewaccount](https://user-images.githubusercontent.com/26436190/39407225-ca791838-4bc2-11e8-8911-bf8b942bcf17.jpg)
 ### List of students
 ![allstudents](https://user-images.githubusercontent.com/26436190/39407222-ca31f5de-4bc2-11e8-8fa6-e6559ec38757.png)
